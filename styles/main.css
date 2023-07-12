@@ -1,0 +1,39 @@
+:root {
+    --dark-gray: #121212;
+    --lighter-gray: #323232;
+    --purple: #6100ED;
+    --dark-purple: #5815b6;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+*::selection {
+    background: var(--purple);
+    color: var(--white);
+}
+
+html {
+    background: var(--dark-gray);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+.w-100 {
+    font-weight: 100;
+}
+
+.w-600 {
+    font-weight: 600;
+}
+
+.c-select::selection {
+    background: var(--white);
+    color: var(--purple);
+}

@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html body {
+    background: #222222;
+    color: #fff;
+    
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 450px;
+    background: #323232;
+    border-radius: 8%;
+    box-shadow: 0px 1px 20px #fff;
+}
+
+form {
+    padding: 4vh 100px;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6100ED;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div input {
+    background: #454545;
+    outline: none;
+    border: 1px solid #858585;
+    border-radius: 12px;
+    width: 300px;
+    height: 44px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+form input#btn {
+    width: 300px;
+    height: 44px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #6100ED;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+form input#btn:hover {
+    background: #4f08b2;
+}
+
+form div:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+form div a {
+    color: #6100ED;
+    font-size: 0.9rem;
+}
+
+form div a:hover {
+    color: #0c5cde;
+}
+
+@media (max-width: 502px){
+    html body {
+        background: #323232;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    main {
+        box-shadow: none;
+    }
+}   

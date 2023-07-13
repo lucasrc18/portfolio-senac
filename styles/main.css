@@ -37,3 +37,7 @@ html {
     background: var(--white);
     color: var(--purple);
 }
+
+label {
+    display: block;
+}

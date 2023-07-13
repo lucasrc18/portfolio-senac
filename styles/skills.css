@@ -1,0 +1,58 @@
+#skills-section {
+    border: 2px solid #f00;
+    height: 100vh;
+    width: 100vw;
+
+    padding: 0 5vw;
+}
+
+#skills-section #sk-title {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 9.58vh;
+    margin-bottom: 6.02vh;
+}   
+
+#skills-section #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#skills-section #container section .knowledge {
+    margin-bottom: 4.44vh;
+}
+
+#skills-section #container section .knowledge span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#skills-section #container section .knowledge h4,
+#skills-section #container section .knowledge p {
+    font-size: 2rem;
+}
+
+div.filled-bar,
+div.not-filled-bar,
+div.half-filled-bar {
+    display: inline-block;
+    width: 90px;
+    height: 45px;
+
+    border-radius: 12px;
+}
+
+div.filled-bar {
+    background: var(--purple);
+}
+
+div.not-filled-bar {
+    background: var(--lighter-gray);
+}
+
+div.half-filled-bar {
+    background: linear-gradient(to right, var(--purple) 50%, var(--lighter-gray) 50%);
+}

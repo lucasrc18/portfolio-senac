@@ -1,0 +1,153 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de login</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet"> <!-- Inter -->
+    
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <main>
+            <section id="small-elements" class="status-0">
+                <p class="empty-message">Adicione elementos clicando em <img class="small-icon" src="./assets/add.svg" alt="Icone de adicionar elemento" /></p>
+
+                <table id="el-table">
+                </table>
+            </section>
+
+            <section id="main-elements" class="status-1">
+                <p class="empty-message">Adicione elementos de destaque clicando em <img class="small-icon" src="./assets/add.svg" alt="Icone de adicionar elemento" /></p>
+
+                <div>
+                    <canvas></canvas>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div><img src="./assets/add.svg" alt="Adicionar elemento" id="addElement" /></div>
+            <div><img src="./assets/edit.svg" alt="Adicionar elemento" /></div>
+            <div><img src="./assets/trash.svg" alt="Deletar element"/></div>
+        </aside>
+
+        <div id="modal-bg" class="active">
+            <div id="modal">
+                <form action="" method="post">
+                    <section>
+                        <label for="el_selector">Qual gráfico:</label>
+                        <select name="el_selector">
+                            <option value="0">Escolha um tipo de elemento:</option>
+                            <option value="1">(D) Calculo de media</option>
+                            <option value="2">(D) Calculo de total</option>
+                            <option value="3">(D) Conte um dado</option>
+                            <option value="4">(G) Grafico de barras</option>
+                            <option value="5">(G) Grafico de linhas</option>
+                        </select>
+                    </section>
+
+                    <div id="not-selected">
+                        Nenhuma opção selecionada!
+                    </div>
+
+                    <div id="single-param" class="sel">
+                        <div id="data-title1">
+                            <p><span id="graphic_type">... </span><span contenteditable><i>...</i></span></p>
+                        </div>
+                        <div id="data-input1">
+                            <label for="1param_i">Digite os dados:</label><br/>
+                            <input type="number" name="1param_i" id="1param_i" placeholder="Ex. 123" />
+                            <input type="submit" value="Adicionar!">
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Dados inseridos:</th>
+                            </tr>
+                        </table>
+                    </div>  
+
+                    <div id="double-params">
+                        <div>
+                            <span>
+                                <label for="x_axis">Eixo X:</label>
+                                <input type="number" name="x_axis" id="x_axis" placeholder="Ex. 123" />
+                            </span>
+                            <span>
+                                <label for="y_axis">Eixo Y:</label>
+                                <input type="number" name="y_axis" id="y_axis" placeholder="Ex. 123" />
+                            </span>
+                            <input type="submit" value="Adicionar!">
+                        </div>
+
+                        <table>
+                            <table>
+                                <tr>
+                                    <th colspan="2">Dados inseridos:</th>
+                                </tr>
+                                <tr>
+                                    <th>Eixo X:</th>
+                                    <th>Eixo Y:</th>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const app = {
+                updateTable(){
+                    const rows = document.querySelectorAll("table tr")
+                    
+                    rows.forEach(r => {
+                        const cols = r.querySelectorAll(".el")
+
+                        if(cols.length < 3) // 1 ou 2
+                            if(cols.length < 2) // 1
+                                cols[0].setAttribute("colspan", 3)
+                            else // 2
+                                cols[0].setAttribute("colspan", 2)
+                    })
+                },
+
+                update(){
+                    app.updateTable();
+                },
+
+                modalAdd(){
+                    const modal = document.getElementById("modal-bg")
+
+                    if(!modal.classList.contains("active"))
+                        modal.classList.add("active")
+                }
+            }
+
+            document.getElementById("addElement").addEventListener("click", app.modalAdd)
+
+            app.update();
+        </script>
+    </body>
+</html>
+
+<!-- 
+<div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+                <div class="el"></div>
+
+ -->

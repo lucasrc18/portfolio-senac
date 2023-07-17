@@ -25,7 +25,7 @@
                         Sou um entusiasta do mundo da tecnologia, eterno estudante e pesquisador, apaixonado em resolver problemas complexos em soluções simples e acessíveis. Tenho com o objetivo de sempre melhorar e facilitar a experiencia de meus usuarios, e manter a performance de minhas aplicações sempre as mais rapidas, através das tecnologias mais recentes e completas do mercado. E ai bora codar?
                     </p>
                     <div class="btns">
-                        <button class="c-select">Minhas habilidades</button>
+                        <button class="c-select" id="sk-btn">Minhas habilidades</button>
                         <button class="c-select">Meus trabalhos</button>
                     </div>
                 </div>
@@ -255,5 +255,10 @@
             </section>
         </section>
 
+        <script>
+            document.getElementById("sk-btn").addEventListener('click', () => {
+                window.location.href = "#skills-section"
+            })
+        </script>
     </body>
 </html>

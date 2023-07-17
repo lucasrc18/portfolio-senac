@@ -147,6 +147,7 @@ aside div:last-child img {
     align-items: center;
 
     height: fit-content;
+    margin-top: 5vh;
 }
 
 #modal-bg.active #modal form > div {
@@ -162,6 +163,7 @@ aside div:last-child img {
 }
 
 #single-param {
+    margin-top: 5vh;
     border: 2px solid #f00;
 }
 
@@ -173,4 +175,27 @@ aside div:last-child img {
 #single-param.sel #data-input1 {
     font-size: 1.4rem;
     color: #0f0;
+    border: #5815b6 2px solid;
+    padding: 0 1.2vw;
+    margin: 3vh 0 3vh 0;
+}
+
+#single-param.sel #data-input1 input {
+    background: #626262;
+    border: var(--dark-gray);
+    outline: none;
+    padding: 1.3vh 1vw;
+    border-radius: 12px;
+    color: var(--white);
+    margin-top: 3vh;
+}
+
+
+#single-param.sel #data-input1 input:last-child {
+    background: var(--purple);
+    font-weight: 600;
+}
+
+#single-param.sel #data-input1 input:last-child:hover {
+    background: var(--dark-purple);
 }

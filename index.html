@@ -12,7 +12,14 @@
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/aboutme.css">
         <link rel="stylesheet" href="./styles/skills.css">
-        <link rel="stylesheet" href="./styles/contactme.css">   
+        <link rel="stylesheet" href="./styles/contactme.css">
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            ScrollReveal().reveal('#skills-section', {
+                delay: 500
+            })
+        </script>
     </head>
     <body>
         <main id="about-me"> 
@@ -258,7 +265,7 @@
         <script>
             document.getElementById("sk-btn").addEventListener('click', () => {
                 window.location.href = "#skills-section"
-            })
+            })            
         </script>
     </body>
 </html>

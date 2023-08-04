@@ -5,6 +5,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+*::selection {
+    background: #6100ED;
+    color: #fff;
+}
+
 html body {
     background: #222222;
     color: #fff;
@@ -58,7 +63,7 @@ form div input {
     color: #fff;
 }
 
-form input#btn {
+form #btn {
     width: 300px;
     height: 44px;
     border-radius: 12px;
@@ -71,7 +76,7 @@ form input#btn {
     margin-bottom: 20px;
 }
 
-form input#btn:hover {
+form #btn:hover {
     background: #4f08b2;
 }
 

@@ -13,28 +13,49 @@
 </head>
 <body>
     <main>
-        <form action="" method="post">
+        <form id="form_i" action="" method="post">
             <h2>
                 Crie uma conta
             </h2>
 
             <div>
                 <label for="name">Nome:</label>
-                <input type="text" name="name" id="name">
+                <input 
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Ex. Antonio Fonseca"
+                    >
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input 
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Ex. exemplo@seuemail.com"
+                    >
             </div>
             <div>
                 <label for="passwd">Senha:</label>
-                <input type="password" name="passwd" id="passwd">
+                <input 
+                    id="passwd"
+                    type="password"
+                    name="passwd"
+                    placeholder="Deve conter pelo menos 6 digitos"
+                    >
             </div>
-            <input id="btn" type="button" value="Enviar">
+            <button id="btn" type="submit">Enviar!</button>
             <div style="justify-content: center; font-size: 1.2rem;">
                 <a href="./index.html">Já tenho uma conta!</a>
             </div>
         </form>
     </main>
+
+    <script>
+        document.getElementById("form_i").addEventListener("submit", event => {
+            event.preventDefault()
+        })
+    </script>
 </body>
 </html>

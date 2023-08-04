@@ -248,16 +248,16 @@
 
             <section>
                 <div>
-                    <img src="./assets/linkedin.svg" alt="Icone do linkedin">
-                    <p>Linkedin:<br/><a target="_blank" href="https://www.linkedin.com/in/lucas-rc20/" class="w-600">@lucas-rc20</a></p>
+                    <img id="linkedin-icon" src="./assets/linkedin.svg" alt="Icone do linkedin" title="lucas-rc20">
+                    <!-- <p>Linkedin:<br/><a target="_blank" href="https://www.linkedin.com/in/lucas-rc20/" class="w-600">@lucas-rc20</a></p> -->
                 </div>
                 <div>
-                    <img src="./assets/instagram.svg" alt="Icone do instagram">
-                    <p>Instagram:<br/><a target="_blank" href="https://www.instagram.com/lucas.rc20" class="w-600">@lucas.rc20</a></p>
+                    <img id="instagram-icon" src="./assets/instagram.svg" alt="Icone do instagram" title="@lucas.rc20">
+                    <!-- <p>Instagram:<br/><a target="_blank" href="https://www.instagram.com/lucas.rc20" class="w-600">@lucas.rc20</a></p> -->
                 </div>
                 <div>
-                    <img src="./assets/github.svg" alt="Icone do github">
-                    <p>Github:<br/><a target="_blank" href="https://www.github.com/lucasrc18" class="w-600">@lucasrc18</a></p>
+                    <img id="github-icon" src="./assets/github.svg" alt="Icone do github" title="lucasrc18">
+                    <!-- <p>Github:<br/><a target="_blank" href="https://www.github.com/lucasrc18" class="w-600">@lucasrc18</a></p> -->
                 </div>
             </section>
         </section>
@@ -266,6 +266,16 @@
             document.getElementById("sk-btn").addEventListener('click', () => {
                 window.location.href = "#skills-section"
             })            
+
+            document.getElementById("linkedin-icon").onclick = () => {
+                window.location.href = "https://www.linkedin.com/in/lucas-rc20/"
+            }
+            document.getElementById("instagram-icon").onclick = () => {
+                window.location.href = "https://www.instagram.com/lucas.rc20/"
+            }
+            document.getElementById("github-icon").onclick = () => {
+                window.location.href = "https://www.github.com/in/lucasrc18/"
+            }
         </script>
     </body>
 </html>

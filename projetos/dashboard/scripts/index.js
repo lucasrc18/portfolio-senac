@@ -1,3 +1,33 @@
+const jsonURL = "data.json"
+const request = new  XMLHttpRequest()
+request.open("GET", jsonURL)
+request.responseType = "json"
+request.send()
+
+let data;
+
+request.onload = () => {
+    data = request.response
+    new Profit()
+    new Expenses()
+    new Sales()
+    new EmployeeSales()
+
+    let incomes = 0
+    let expenses = 0
+    data.profit.forEach(i => {incomes += i})
+    data.expenses.forEach(i => {expenses += i})
+    const total = incomes - expenses;
+
+    document.getElementById("income").getElementsByTagName("b")[0].innerHTML = incomes.toFixed(2)
+    document.getElementById("expenses").getElementsByTagName("b")[0].innerHTML = expenses.toFixed(2)
+    document.getElementById("total").getElementsByTagName("b")[0].innerHTML = total.toFixed(2)
+    if(total < 0){
+        document.getElementById("total").style.background = "#BD1717"
+        document.getElementById("total").style.boxShadow = "0px 0px 7px #DD1717"
+    }
+}
+
 function getOptions(t){
     return {
         responsive: true, // Tornar o gráfico responsivo
@@ -44,7 +74,7 @@ class Profit  {
         this.data = {
             labels: months, // axis X
             datasets: [{
-                data: [100, 150, 200, 120, 180, 300, 100, 90, 120, 200, 30, 100], // Eixo Y - valores do gráfico
+                data: data.profit, // Eixo Y - valores do gráfico
                 borderColor: "#1260A9", // Cor da linha
                 borderWidth: 2, // Espessura da linha
                 fill: false, // Preenchimento desativado para ter apenas a linha
@@ -64,7 +94,7 @@ class Expenses {
         this.data = {
             labels: months, // axis X
             datasets: [{
-                data: [100, 150, 200, 120, 180, 300, 100, 90, 120, 200, 30, 100], // Eixo Y - valores do gráfico
+                data: data.expenses, // Eixo Y - valores do gráfico
                 borderColor: "#1260A9", // Cor da linha
                 borderWidth: 2, // Espessura da linha
                 fill: false, // Preenchimento desativado para ter apenas a linha
@@ -82,16 +112,9 @@ class Expenses {
 class EmployeeSales {
     constructor(){
         this.data = {
-            labels: [
-                "employee1",
-                "employee2",
-                "employee3",
-                "employee4",
-                "employee5",
-                "employee6"
-            ],
+            labels: data.employes.labels,
             datasets: [{
-                data: [100, 150, 200, 120, 180, 300, 100, 90, 120, 200, 30, 100],
+                data: data.employes.data,
                 backgroundColor: "#1260A9",
                 borderWidth: 2, 
                 fill: true
@@ -111,7 +134,7 @@ class Sales {
         this.data = {
             labels: months,
             datasets: [{
-                data: [100, 150, 200, 120, 180, 300, 100, 90, 120, 200, 30, 100],
+                data: data.sales,
                 borderColor: "#1260A9", 
                 borderWidth: 2, 
                 fill: false
@@ -125,8 +148,3 @@ class Sales {
         })
     }
 }
-
-new Profit()
-new Expenses()
-new Sales()
-new EmployeeSales()

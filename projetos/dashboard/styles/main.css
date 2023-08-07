@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+b, b * {
+    font-weight: 800;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #464646;
+}
+
+header {
+    margin: 40px 0 38px 0;
+    color: #fff;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-controlpanel,
+#right-controlpanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-controlpanel section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 895px;
+    margin-bottom: 3vh;
+}
+
+#left-controlpanel section .card {
+
+    border-radius: 16px;
+    width: 271px;
+    height: 150px;
+
+    color: #fff;
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 28px;
+}
+
+#left-controlpanel section #income {
+    background: #0aa4d7;
+    box-shadow: 0 0 7px #0caadf;
+} 
+
+#left-controlpanel section #expenses {
+    background: #5E5E5E;
+    box-shadow: 0 0 7px #837e7e;
+}
+
+#left-controlpanel section #total {
+    background: #05941c;
+    box-shadow: 0 0 7px #0aea2f;
+}
+
+canvas {
+    border-radius: 16px;
+    background: #323232;
+    scale: .9 .9;
+}
+
+#profit-container,
+#expenses-container {
+    width: 895px;
+    height: 294px;
+}
+
+#employee-container,
+#sales-container {
+    width: 846px;
+    height: 426px;
+}

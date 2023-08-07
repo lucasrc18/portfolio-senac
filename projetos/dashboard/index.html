@@ -2,11 +2,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>d</title>
+    <title>Dashboard de vendas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <header>
+        <h2>
+            Dashboard de vendas
+        </h2>
+    </header>
+
+    <main id="dashboard">
+        <section id="left-controlpanel">
+            <section>
+                <div class="card" id="income">
+                    <p>
+                        Entrada:
+                    </p>
+                    <p>
+                        R$: <b>0,00</b>
+                    </p>
+                </div>
+                <div class="card" id="expenses">
+                    <p>
+                        Saida:
+                    </p>
+                    <p>
+                        R$: <b>0,00</b>
+                    </p>
+                </div>
+                <div class="card" id="total">
+                    <p>
+                        Receita:
+                    </p>
+                    <p>
+                        R$: <b>0,00</b>
+                    </p>
+                </div>
+            </section>
+            
+            <div id="profit-container">
+                <canvas id="profit-graph"></canvas>
+            </div>
+            <div id="expenses-container">
+                <canvas id="expenses-graph"></canvas>
+            </div>
+        </section>
+
+        <section id="right-controlpanel">
+            <div id="employee-container">
+                <canvas id="employee-graph"></canvas>
+            </div>
+            <div id="sales-container">
+                <canvas id="sales-graph"></canvas>
+            </div>
+        </section>
+    </main>
 
 
-
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

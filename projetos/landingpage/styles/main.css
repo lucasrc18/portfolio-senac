@@ -1,67 +1,134 @@
-* { 
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: url('../assets/bg.jpg') no-repeat;
-    background-size: 100vw 100vh;
     width: 100vw;
     height: 100vh;
-    color: #fff;
-    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
 }
 
 header {
-    background: #0f2b41;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10vw;
-    height: 6vh;
-}
 
-header h2 {
-    font-size: 2rem;
+    padding: 0 4vw;
+    height: 10vh;
+    font-size: 1.4rem;
 }
 
 header nav ul {
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
 
-    width: 35vw;
-}
-
-header nav ul li {
-    font-size: 1.1rem;
-}
-
-header nav ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    width: 26vw;
 }
 
 main {
-    position: absolute;
-    top: 0;
-    left: 54.17vw;
-
-    width: 45.83vw;
-    padding: 0 10vw;
-    height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main section h2 { 
-    font-size: 2rem;
+main div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-main section p {
-    font-size: 1.2rem;
-    padding: 0 12vw 0 1vw;
+footer {
+    background: #004faa;
+    color: #fff;
+    width: 100vw;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    translate: 0 50%;
+}
+
+footer:hover {
+    animation-name: show;
+    animation-delay: 100ms;
+    animation-iteration-count: 1;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 70%;
+}
+
+footer section {
+    width: 27.27%;
+    margin-right: 9.09%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer section small {
+    font-size: 0.85rem;
+}
+
+footer section h3 {
+    font-size: 1.45rem;
+}
+
+footer section p {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+footer section.current {
+    background: #ccc;
+    height: 110%;
+    translate: 0 -5%;
+    color: #004faa;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer section.current small {
+    font-size: 1rem;
+}
+
+footer section.current h3 {
+    font-size: 1.5rem;
+}
+
+footer section.current p {
+    font-size: 1rem;
+    padding: 0 10%;
+}
+
+@keyframes show {
+    0% {
+        translate: 0 50%;
+    }
+
+    100% {
+        translate: 0 0;
+    }
 }

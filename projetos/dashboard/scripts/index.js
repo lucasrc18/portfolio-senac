@@ -1,5 +1,5 @@
 const jsonURL = "data.json"
-const request = new  XMLHttpRequest()
+const request = new XMLHttpRequest()
 request.open("GET", jsonURL)
 request.responseType = "json"
 request.send()
@@ -30,8 +30,8 @@ request.onload = () => {
 
 function getOptions(t){
     return {
-        responsive: true, // Tornar o gráfico responsivo
-        maintainAspectRatio: false, // Manter a proporção
+        responsive: true, // Tornar o gráfico responsivo pra cada dispositivo
+        maintainAspectRatio: false, // Manter a proporção 
         scales: {
             y: {
                 beginAtZero: true, // Começar o eixo Y no valor zero

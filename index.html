@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./styles/aboutme.css">
         <link rel="stylesheet" href="./styles/skills.css">
         <link rel="stylesheet" href="./styles/contactme.css">
+        <link rel="stylesheet" href="./styles/works.css">
         
         <script src="https://unpkg.com/scrollreveal"></script>
         <script>
@@ -33,7 +34,7 @@
                     </p>
                     <div class="btns">
                         <button class="c-select" id="sk-btn">Minhas habilidades</button>
-                        <button class="c-select">Meus trabalhos</button>
+                        <button class="c-select" id="mw-btn">Meus trabalhos</button>
                     </div>
                 </div>
             </section>
@@ -220,12 +221,52 @@
                 </section>
             </div>
         </section>
-    <!--
-        <section id="works-section"></section>
-    -->
 
-        <section style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
-            ...
+        <section id="works-section">
+            <h3>Meus trabalhos</h3>
+
+            <table>
+                <tr class="r1">
+                    <td>
+                        Dashbord
+                    </td>
+                    <td>
+                        <a target="_blank" href="./projetos/dashboard/index.html">Clique aqui</a>
+                    </td>
+                </tr>
+                <tr class="r2">
+                    <td>
+                        Formulário
+                    </td>
+                    <td>
+                        <a target="_blank" href="./projetos/formulario/index.html">Clique aqui</a>
+                    </td>
+                </tr>
+                <tr class="r3">
+                    <td>
+                        Landing page
+                    </td>
+                    <td>
+                        <a target="_blank" href="./projetos/landingpage/index.html">Clique aqui</a>
+                    </td>
+                </tr>
+                <tr class="r4">
+                    <td>
+                        Login
+                    </td>
+                    <td>
+                        <a target="_blank" href="./projetos/login/index.html">Clique aqui</a>
+                    </td>
+                </tr>
+                <tr class="r5">
+                    <td>
+                        Produtos
+                    </td>
+                    <td>
+                        <a target="_blank" href="./projetos/produtos/index.html">Clique aqui</a>
+                    </td>
+                </tr>
+            </table>
         </section>
 
         <section id="contact-me">
@@ -265,7 +306,15 @@
         <script>
             document.getElementById("sk-btn").addEventListener('click', () => {
                 window.location.href = "#skills-section"
-            })            
+            })   
+            
+            document.getElementById("mw-btn").addEventListener('click', () => {
+                window.location.href = "#works-section"
+            }) 
+
+            document.getElementById("photo").addEventListener('click', () => {
+                window.location.href = "#contact-me"
+            }) 
 
             document.getElementById("linkedin-icon").onclick = () => {
                 window.location.href = "https://www.linkedin.com/in/lucas-rc20/"

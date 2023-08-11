@@ -54,6 +54,7 @@
     height: fit-content;
     padding: 1vh 1.5vw;
     scale: 1.15 1.15;
+    cursor: pointer;
 }
 
 #about-me #me #photo #my-photo {

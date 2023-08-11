@@ -28,8 +28,6 @@ html {
     scroll-behavior: smooth;
 }
 
-moz
-
 .w-100 {
     font-weight: 100;
 }
@@ -45,4 +43,9 @@ moz
 
 label {
     display: block;
+}
+
+button {
+    outline: none;
+    border: none;
 }

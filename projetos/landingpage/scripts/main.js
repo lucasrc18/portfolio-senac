@@ -7,11 +7,11 @@ const highlights = [
 ]
 
 const images = [
-    "../assets/Internet.svg",
-    "../assets/Login.svg",
-    "../assets/Dashboard.svg",
-    "../assets/Portfolio.svg",
-    "../assets/Bloging.svg"
+    "./assets/Internet.svg",
+    "./assets/Login.svg",
+    "./assets/Dashboard.svg",
+    "./assets/Portfolio.svg",
+    "./assets/Bloging.svg"
 ]
 
 const steps_ref = document.getElementsByClassName("step");

@@ -1,0 +1,40 @@
+#works-section {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    font-size: 2rem
+}
+
+#works-section table {
+    margin-top: 2vh;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 12px;
+}
+
+#works-section table tr td {
+    padding: 1rem;
+}
+
+.r2, .r4, .r6 {
+    background: #323232;
+}
+
+#works-section table tr td a {
+    color: #6100ED;
+}
+
+#works-section table tr td a:hover {
+    color: #5815b6;
+}
+
+#works-section table tr td a:visited,
+#works-section table tr td a:focus {
+    color: #6100ED;
+}

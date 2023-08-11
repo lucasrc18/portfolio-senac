@@ -1,9 +1,9 @@
 const img = {
-    Blog: "../assets/Bloging.svg",
-    ECommerce: "../assets/Internet.svg",
-    Portfolio: "../assets/Portfolio.svg",
-    SignUp: "../assets/Login.svg",
-    Dashboard: "../assets/Dashboard.svg"
+    Blog: "./assets/Bloging.svg",
+    ECommerce: "./assets/Internet.svg",
+    Portfolio: "./assets/Portfolio.svg",
+    SignUp: "./assets/Login.svg",
+    Dashboard: "./assets/Dashboard.svg"
 }
 
 const products = [
@@ -71,17 +71,17 @@ ref.right_arrow.addEventListener("click", () => {
 
 // Animations
 ref.left_arrow.addEventListener("mouseover", () => {
-    ref.left_arrow.src = "../assets/filled_left_arrow.svg"
+    ref.left_arrow.src = "./assets/filled_left_arrow.svg"
 })
 ref.left_arrow.addEventListener("mouseout", () => {
-    ref.left_arrow.src = "../assets/left_arrow.svg"
+    ref.left_arrow.src = "./assets/left_arrow.svg"
 })
 
 ref.right_arrow.addEventListener("mouseover", () => {
-    ref.right_arrow.src = "../assets/filled_right_arrow.svg"
+    ref.right_arrow.src = "./assets/filled_right_arrow.svg"
 })
 ref.right_arrow.addEventListener("mouseout", () => {
-    ref.right_arrow.src = "../assets/right_arrow.svg"
+    ref.right_arrow.src = "./assets/right_arrow.svg"
 })
 
 let cur = 0

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+/* #32325d */
 body {
     width: 100vw;
     height: 100vh;
@@ -23,6 +23,7 @@ header {
 
     padding: 0 4vw;
     height: 10vh;
+    width: 100vw;
     font-size: 1.4rem;
 }
 
@@ -32,7 +33,17 @@ header nav ul {
     align-items: center;
     list-style-type: none;
 
-    width: 26vw;
+    width: 40vw;
+}
+
+header nav ul li {
+    color: #063b77;
+    cursor: pointer;
+}
+
+header nav ul li:hover {
+    color: #405cf5;
+    text-decoration: underline;
 }
 
 main {
@@ -44,8 +55,80 @@ main {
 main div:first-child {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    margin-left: 10vw;
+    width: 30vw;
+}
+
+main div:first-child h3 {
+    font-size: 1.05rem;
+}
+
+main div:first-child h1 {
+    font-size: 2.6rem;
+}
+
+#typing-bar {
+    font-size: 2.3rem;
+}
+
+main div:first-child #typing-bar {
+    animation: blink 0.5s infinite linear;
+}
+
+main div:first-child button {
+    appearance: button;
+    background-color: #405cf5;
+    color: #fff;
+    outline: none;
+    border: none;
+    /* font-size: 1.2rem; */
+    font-size: 100%;
+    margin: 1.5vh .5vw 0 .5vw;
+    padding: 0 25px;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    height: 44px;
+
+    position: relative;
+    text-align: center;
+    text-transform: none;
+}
+main div:first-child button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+main div:first-child button:hover {
+    background: #063b77;
+}
+
+main div:first-child button:last-child {
+    background: #fff;
+    color: #004faa;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0.5px solid #32325d;
+}
+
+main div:first-child button:last-child:hover {
+    text-decoration: underline;
+    background: #fff;
+}
+
+main > div:last-child {
+    width: 60vw;
+}
+
+main div:last-child {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+main div:last-child img {
+    width: 70%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 48px;
 }
 
 footer {
@@ -65,6 +148,8 @@ footer:hover {
     animation-name: show;
     animation-delay: 100ms;
     animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 footer div {
@@ -83,6 +168,9 @@ footer section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    cursor: pointer;
+    padding: 0 1vw;
 }
 
 footer section small {
@@ -123,6 +211,11 @@ footer section.current p {
     padding: 0 10%;
 }
 
+footer section:not(.current):hover {
+    background: #0a4589;
+    height: 100%;
+}
+
 @keyframes show {
     0% {
         translate: 0 50%;
@@ -130,5 +223,15 @@ footer section.current p {
 
     100% {
         translate: 0 0;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
     }
 }

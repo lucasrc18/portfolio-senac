@@ -1,3 +1,0 @@
-max-width: 1200px img -> 480px
-max-width: 690px img -> 300px; desc: 1rem; preco: 1.5rem; 
-max-width: 420px

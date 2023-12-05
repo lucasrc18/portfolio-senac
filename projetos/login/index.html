@@ -1,45 +1,65 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de login</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap" rel="stylesheet"> <!-- Inter -->
-
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login page</title>
 </head>
-<body>
-    <main>
-        <form action="" method="post">
-            <h2>
-                Entre em sua conta
-            </h2>
 
-            <div>
-                <label for="email">Email:</label>
-                <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Ex. exemplo@seuemail.com">
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Registre com</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon i-google"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon i-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon i-github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon i-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span class="sec-opt">ou use seu email</span>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button>Registrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon i-google"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon i-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon i-github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon i-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span class="sec-opt">ou use seu email</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Esqueci minha senha</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Faça login com sua conta, e desfrute de todos os nossos recursos</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bem vindo, ao time!</h1>
+                    <p>Se registre e faça parte do time, para desfrutar de todos os nossos recursos</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
             </div>
-            <div>
-                <label for="passwd">Senha:</label>
-                <input 
-                    id="passwd"
-                    name="passwd"
-                    type="password" 
-                    placeholder="Digite sua senha">
-            </div>
-            <input id="btn" type="button" value="Enviar">
-            <div>
-                <a href="./signup.html">Criar uma conta</a>
-                <a href="#">Esqueci minha senha!</a>
-            </div>
-        </form>
-    </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
